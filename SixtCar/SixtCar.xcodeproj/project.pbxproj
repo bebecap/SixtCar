@@ -13,9 +13,14 @@
 		64246FE42369028D00CF4F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64246FE22369028D00CF4F1B /* Main.storyboard */; };
 		64246FE62369028F00CF4F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64246FE52369028F00CF4F1B /* Assets.xcassets */; };
 		64246FE92369028F00CF4F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64246FE72369028F00CF4F1B /* LaunchScreen.storyboard */; };
+		64246FF22369038A00CF4F1B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64246FF12369038A00CF4F1B /* Vehicle.swift */; };
+		64246FF52369043500CF4F1B /* SixtConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64246FF42369043500CF4F1B /* SixtConnector.swift */; };
+		64246FF72369084C00CF4F1B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 64246FF62369084C00CF4F1B /* Podfile */; };
+		89745D9173B9648B4B2AB93E /* libPods-SixtCar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EB0F9576DF71E74F7C60B /* libPods-SixtCar.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A0EB0F9576DF71E74F7C60B /* libPods-SixtCar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SixtCar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64246FD92369028D00CF4F1B /* SixtCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixtCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64246FDC2369028D00CF4F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64246FDE2369028D00CF4F1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		64246FE52369028F00CF4F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64246FE82369028F00CF4F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64246FEA2369028F00CF4F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64246FF12369038A00CF4F1B /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		64246FF42369043500CF4F1B /* SixtConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtConnector.swift; sourceTree = "<group>"; };
+		64246FF62369084C00CF4F1B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		91662735719E5A3BAAD61A8B /* Pods-SixtCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtCar.release.xcconfig"; path = "Target Support Files/Pods-SixtCar/Pods-SixtCar.release.xcconfig"; sourceTree = "<group>"; };
+		EF293A389C10907E73535452 /* Pods-SixtCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtCar.debug.xcconfig"; path = "Target Support Files/Pods-SixtCar/Pods-SixtCar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89745D9173B9648B4B2AB93E /* libPods-SixtCar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C9A65EE640B683CB66A9E0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF293A389C10907E73535452 /* Pods-SixtCar.debug.xcconfig */,
+				91662735719E5A3BAAD61A8B /* Pods-SixtCar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4136A95CFD17AC95DC51CD86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EB0F9576DF71E74F7C60B /* libPods-SixtCar.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		64246FD02369028D00CF4F1B = {
 			isa = PBXGroup;
 			children = (
+				64246FF62369084C00CF4F1B /* Podfile */,
 				64246FDB2369028D00CF4F1B /* SixtCar */,
 				64246FDA2369028D00CF4F1B /* Products */,
+				2C9A65EE640B683CB66A9E0B /* Pods */,
+				4136A95CFD17AC95DC51CD86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +87,7 @@
 		64246FDB2369028D00CF4F1B /* SixtCar */ = {
 			isa = PBXGroup;
 			children = (
+				64246FF02369037D00CF4F1B /* Model */,
 				64246FDC2369028D00CF4F1B /* AppDelegate.swift */,
 				64246FDE2369028D00CF4F1B /* SceneDelegate.swift */,
 				64246FE02369028D00CF4F1B /* ViewController.swift */,
@@ -67,6 +99,15 @@
 			path = SixtCar;
 			sourceTree = "<group>";
 		};
+		64246FF02369037D00CF4F1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64246FF12369038A00CF4F1B /* Vehicle.swift */,
+				64246FF42369043500CF4F1B /* SixtConnector.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +115,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64246FED2369028F00CF4F1B /* Build configuration list for PBXNativeTarget "SixtCar" */;
 			buildPhases = (
+				A8FCF8C9D4789037D3B0BB89 /* [CP] Check Pods Manifest.lock */,
 				64246FD52369028D00CF4F1B /* Sources */,
 				64246FD62369028D00CF4F1B /* Frameworks */,
 				64246FD72369028D00CF4F1B /* Resources */,
@@ -127,17 +169,45 @@
 			files = (
 				64246FE92369028F00CF4F1B /* LaunchScreen.storyboard in Resources */,
 				64246FE62369028F00CF4F1B /* Assets.xcassets in Resources */,
+				64246FF72369084C00CF4F1B /* Podfile in Resources */,
 				64246FE42369028D00CF4F1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A8FCF8C9D4789037D3B0BB89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SixtCar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64246FD52369028D00CF4F1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64246FF52369043500CF4F1B /* SixtConnector.swift in Sources */,
+				64246FF22369038A00CF4F1B /* Vehicle.swift in Sources */,
 				64246FE12369028D00CF4F1B /* ViewController.swift in Sources */,
 				64246FDD2369028D00CF4F1B /* AppDelegate.swift in Sources */,
 				64246FDF2369028D00CF4F1B /* SceneDelegate.swift in Sources */,
@@ -282,6 +352,7 @@
 		};
 		64246FEE2369028F00CF4F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF293A389C10907E73535452 /* Pods-SixtCar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +371,7 @@
 		};
 		64246FEF2369028F00CF4F1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91662735719E5A3BAAD61A8B /* Pods-SixtCar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
