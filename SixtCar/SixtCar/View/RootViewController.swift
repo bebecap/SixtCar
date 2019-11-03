@@ -8,8 +8,9 @@
 
 import UIKit
 
-class RootViewController: UIViewController, ViewModelDriven {
-    
+class RootViewController: UIViewController, StoryboardEmbeddedViewController, ViewModelDriven {
+    typealias StoryboardEmbeddingViewController = UINavigationController
+       
     typealias ViewModelType = RootViewModel
     var viewModel: ViewModelType!
 
@@ -18,8 +19,6 @@ class RootViewController: UIViewController, ViewModelDriven {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     @IBAction
