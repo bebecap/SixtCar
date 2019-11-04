@@ -8,6 +8,7 @@
 - MVVM with RxSwift
 - Loading vehicle list from the given [link](https://cdn.sixt.io/codingtask/cars)
 - 2 representations for vehicle list: Map and View 
+- Error handling
 
 ### Known issues
 - Tests are missing
