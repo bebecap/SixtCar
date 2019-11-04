@@ -1,10 +1,3 @@
-//
-//  SixtConnector.swift
-//  SixtCar
-//
-//  Created by Volodymyr Grytsenko on 30.10.19.
-//  Copyright © 2019 Volodymyr Grytsenko. All rights reserved.
-//
 
 import Alamofire
 
@@ -12,10 +5,14 @@ private let baseURL = URL(string: "https://cdn.sixt.io/")!
 
 class SixtConnector {
     
-    typealias VehicleCompletionHandler = (Result<[Vehicle], AFError>) -> Void
+    enum Endpoint: String {
+        case vehicles = "codingtask/cars"
+    }
     
-    func loadVehicles(completion: VehicleCompletionHandler? = nil) {
-        AF.request(baseURL.appendingPathComponent("codingtask/cars")).responseDecodable { (response: DataResponse<[Vehicle], AFError>) in
+    typealias VehiclesCompletionHandler = (Result<[Vehicle], AFError>) -> Void
+    
+    func loadVehicles(completion: VehiclesCompletionHandler? = nil) {
+        AF.request(baseURL.appendingPathComponent(Endpoint.vehicles.rawValue)).responseDecodable { (response: DataResponse<[Vehicle], AFError>) in
             switch response.result {
             case .success(let vehicles):
                 completion?(.success(vehicles))

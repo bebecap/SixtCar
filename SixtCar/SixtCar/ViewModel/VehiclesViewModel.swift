@@ -10,9 +10,9 @@ class VehiclesViewModel: ViewModel {
     
     // MARK: - Observables
     
-    let vehicles = PublishSubject<[Vehicle]>()
-    let isLoading = PublishSubject<Bool>()
-    let requestError = PublishSubject<RequestError?>()
+    let vehicles = BehaviorSubject<[VehicleViewModel]>(value: [])
+    let isLoading = BehaviorSubject<Bool>(value: false)
+    let requestError = BehaviorSubject<RequestError?>(value: nil)
     
     init(sixtConnector: SixtConnector) {
         self.sixtConnector = sixtConnector
@@ -23,7 +23,7 @@ class VehiclesViewModel: ViewModel {
         sixtConnector.loadVehicles { (result) in
             switch result {
             case .success(let vehicles):
-                self.vehicles.onNext(vehicles)
+                self.vehicles.onNext(vehicles.map{ VehicleViewModel(from: $0) })
             case .failure(let error):
                 self.requestError.onNext(.serverError(error.errorDescription))
             }
