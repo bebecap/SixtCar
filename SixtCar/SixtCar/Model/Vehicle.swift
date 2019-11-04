@@ -10,6 +10,11 @@ import Foundation
 
 struct Vehicle: Codable {
     
+    enum Make: String, Codable {
+        case bmw = "BMW"
+        case mini = "MINI"
+    }
+    
     enum FuelType: String, Codable {
         case diesel = "D"
         case petrol = "P"
@@ -31,10 +36,12 @@ struct Vehicle: Codable {
     var modelIdentifier: String
     var modelName: String
     var name: String
-    var make: String
+    var make: Make
+    var group: Make
     var color: String
     var series: String
     var fuelType: FuelType
+    var fuelLevel: Double
     var transmission: TransmissionType
     var licensePlate: String
     var latitude: Double

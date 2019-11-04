@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sdz-ry-mPm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -7,22 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="yh1-mw-8ZT">
-            <objects>
-                <navigationController id="sdz-ry-mPm" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DeW-eg-v3Q">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T62-gc-XhU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9xK-pz-Ij9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1584" y="82"/>
-        </scene>
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -32,35 +16,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbn-cF-vPE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sbn-cF-vPE" secondAttribute="trailing" id="95T-9c-QUC"/>
-                            <constraint firstItem="Sbn-cF-vPE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="daj-4V-sr3"/>
-                            <constraint firstItem="Sbn-cF-vPE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gS2-0w-X0R"/>
-                            <constraint firstAttribute="bottom" secondItem="Sbn-cF-vPE" secondAttribute="bottom" id="s2B-xc-hnv"/>
+                            <constraint firstItem="Sbn-cF-vPE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yhs-Se-E3G"/>
+                            <constraint firstItem="Sbn-cF-vPE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="flu-Fc-HWL"/>
+                            <constraint firstAttribute="bottom" secondItem="Sbn-cF-vPE" secondAttribute="bottom" id="hwd-KA-QrA"/>
+                            <constraint firstItem="Sbn-cF-vPE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kSw-DW-HsV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="76n-3f-3Uq">
-                        <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="7ko-Ye-AYR">
-                            <rect key="frame" x="161.5" y="5.5" width="91" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Map"/>
-                                <segment title="List"/>
-                            </segments>
-                            <connections>
-                                <action selector="segmentedControlValueChanged" destination="dkx-z0-nzr" eventType="valueChanged" id="bU1-OX-2Iv"/>
-                            </connections>
-                        </segmentedControl>
-                    </navigationItem>
                     <connections>
                         <outlet property="representationContainerView" destination="Sbn-cF-vPE" id="hU6-Qi-P21"/>
-                        <outlet property="representationSegmentedControl" destination="7ko-Ye-AYR" id="WFq-hV-STh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
