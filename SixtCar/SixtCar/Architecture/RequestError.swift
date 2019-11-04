@@ -1,4 +1,6 @@
 
+import Foundation
+
 enum RequestError {
     case serverError(String?)
     case internetError(String?)

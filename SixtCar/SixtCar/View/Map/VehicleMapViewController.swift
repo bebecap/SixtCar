@@ -1,5 +1,6 @@
 
 import UIKit
+import Foundation
 import RxSwift
 import MapKit
 
@@ -37,7 +38,13 @@ class VehicleMapViewController: UIViewController, StoryboardInitialViewControlle
     }
     
     private func requestErrorSubscriber(event: RxSwift.Event<RequestError?>) -> Void {
-        print(event)
+        switch event {
+        case .next(let error):
+            guard let error = error else { return }
+            self.present(UIAlertController.basicAlert(title: "Error", message: error.message), animated: true, completion: nil)
+        default:
+            return
+        }
     }
     
     private func vehiclesSubscriber(event: RxSwift.Event<[VehicleViewModel]>) -> Void {
@@ -91,5 +98,20 @@ class VehicleMapViewController: UIViewController, StoryboardInitialViewControlle
         mapView.setRegion(region, animated: true)
         
         locationManager.stopUpdatingLocation()
+    }
+}
+
+private extension RequestError {
+    var message: String {
+        switch self {
+        case .internetError(let error):
+            let message = error ?? "No message"
+            return "Internet error: \(message)"
+        case .serverError(let error):
+            let message = error ?? "No message"
+            return "Server error: \(message)"
+        case .unknownError:
+            return "Unknown error"
+        }
     }
 }
